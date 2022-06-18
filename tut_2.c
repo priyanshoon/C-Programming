@@ -43,7 +43,30 @@ int main() {
     ---------------------------------------------
     */
 
-    
+    printf("age is %d\n", a);
+    printf("value of pi is %f\n", pi);
+    printf("star looks like this %c\n", star);
+
+    // Input in C Programming
+
+    int age;
+    scanf("%d", &age);
+    printf("my age is %d\n", age);
+
+    // Calculating area of a square
+
+    int side;
+    printf("Enter the side of Square: ");
+    scanf("%d", &side);
+    printf("Area of square is : %d\n", side*side);
+
+    // Calculate the area of circle
+
+    float radius;
+
+    printf("Enter your radius of a circle: ");
+    scanf("%f", &radius);
+    printf("Area of a circle is : %f\n", pi*(radius*radius));
 
     return 0;
 }
