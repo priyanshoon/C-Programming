@@ -1,4 +1,9 @@
 #include<stdio.h>
+#include<math.h>
+
+void print_hello(){
+  printf("Hello, World!");
+}
 
 int main() {
     int a = 25;
