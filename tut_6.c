@@ -10,7 +10,6 @@ int main() {
     for (int i = strlen(name) -1; i >= 0; i--) {
         revName[i] = name[j];
         j++;
-
     }
     revName[j] = '\0';
     printf("%s", revName);
