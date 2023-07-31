@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-
   /*
     int x = 10;
     &x => 200 (& --> address, means address of x)
@@ -15,7 +14,6 @@ int main(int argc, char *argv[]) {
     *(&x) => x
 
     *p = 20 ==> *(&x) = 20 ==> x = 20
-
   */
 
 

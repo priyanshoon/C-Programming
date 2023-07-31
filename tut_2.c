@@ -1,10 +1,6 @@
 #include<stdio.h>
 #include<math.h>
 
-void print_hello(){
-  printf("Hello, World!");
-}
-
 int main() {
     int a = 25;
     char star = '*';
@@ -17,7 +13,7 @@ int main() {
 
     /*
     ------------------------------------------------------------
-    Data Types                                     Size in bytes 
+    Data Types                                     Size in bytes
 
     Char or Signed Char                            1
     Unsigend Char                                  1

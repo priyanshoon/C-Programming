@@ -1,35 +1,47 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
-/*
-struct myStructure {
-    int myNum;
-    char myLetter;
+struct Room {
+  float width;
+  float length;
+  float height;
+  char *name;
 };
-*/
 
-struct employee
-{
-    int id;
-    char name[24];
+struct House {
+  char *address;
+  struct Room *room[10];
 };
+
+void printHouse(struct House house);
 
 int main() {
-    // Create a structure variable of myStructure called s1
-    //    struct myStructure s1;
+  struct House h;
+  h.address = "Dhadka Road Asansol";
+  for (int i = 0; i < 10; i++) {
+    h.room[i] = NULL;
+  }
 
-    //s1.myNum = 18;
-    //  s1.myLetter = 'B';
-    
-    struct employee e1, e2;
-    e1.id = 1;
-    e2.id = 2;
-    strcpy(e1.name, "Priyanshu");
-    strcpy(e2.name, "Rounak");
+  struct Room hall;
+  hall.width = 10;
+  hall.length = 12;
+  hall.height = 9;
+  hall.name = "Hall";
 
-    printf("First employee name is %s and his id is %d \n", e1.name, e1.id);
-    printf("Second employee name is %s and his id is %d \n", e2.name, e2.id);
+  h.room[0] = &hall;
 
+  printHouse(h);
 
-    return 0;
+  return 0;
+}
+
+void printHouse(struct House house) {
+  printf(house.address);
+  printf("\n");
+  for (int i = 0; i < 10; i++) {
+    if (house.room[i] != NULL) {
+      struct Room r = *house.room[i];
+      printf("Room #%d: %s\n", i, r.name);
+    }
+  }
 }

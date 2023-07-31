@@ -1,2 +1,4 @@
-tut_6: tut_6.c
-	gcc -o tut_6 tut_6.c
+all:
+	gcc struct-tut.c -o main
+	./main
+	rm -rf main
