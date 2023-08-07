@@ -13,6 +13,7 @@ struct employee {
 	int age;
 	char gender;
 	double salary;
+	struct employee *boss;
 };
 
 struct employee2 {
@@ -25,6 +26,7 @@ struct employee2 {
 
 void printEmployee(struct employee aEmp);
 void printEmployee2(struct employee *aEmp);
+void printName(char *fName, char *lName);
 
 int main(int argc, char *argv[]) {
 	//  09 - Intro to Structures (Part 1)
@@ -52,5 +54,39 @@ int main(int argc, char *argv[]) {
 	strcpy(aEmp2.firstname, "Josh");
 	strcpy(aEmp2.lastname, "Gupta");
 
+	struct employee *ePtr = &aEmp;
+	//ePtr = &aEmp;
+
+	//ePtr->firstname = "Updated";
+
+	//printf("First Name: \t%s\n", ePtr->firstname);
+
+	//printEmployee(aEmp);
+	//printf("Main func First Name: \t%s\n", aEmp.firstname);
+	//printEmployee2(&aEmp);
+	//printf("First Name: \t%s\n", aEmp.firstname);
+	//printEmployee2(ePtr);
+
+	printName(ePtr->firstname, ePtr->lastname);
+
 	return 0;
+}
+
+void printEmployee(struct employee aEmp) {
+	printf("First Name: \t%s\n", aEmp.firstname);
+	printf("Last Name: \t%s\n", aEmp.lastname);
+
+	aEmp.firstname = "updated!";
+	printf("First Name: \t%s\n", aEmp.firstname);
+}
+
+void printEmployee2(struct employee *aEmp) {
+	printf("First Name: \t%s\n", aEmp->firstname);
+	printf("Last Name: \t%s\n", aEmp->lastname);
+	aEmp->firstname = "In function";
+}
+
+void printName(char *fName, char *lName) {
+	printf("First Name: \t%s\n", fName);
+	printf("Last Name: \t%s\n", lName);
 }
