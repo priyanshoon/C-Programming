@@ -4,14 +4,14 @@
 int* return_me(int*, int*);
 
 int main(int argc, char *argv[]) {
-  int x = 10;
-  int *p = &x;
-  printf("P: %p\n", p);
+    int x = 10;
+    int *p = &x;
+    printf("P: %p\n", p);
 
-  printf("P: %p\n", p);
-  return 0;
+    printf("P: %p\n", p);
+    return 0;
 }
 
 int* return_me(int *pint1, int *pint2) {
-  return NULL;
+    return NULL;
 }
