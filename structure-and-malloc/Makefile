@@ -1,4 +1,4 @@
 all:
-	gcc tut-4.c -o main
+	gcc tut-6.c -o main
 	./main
 	rm -rf main
