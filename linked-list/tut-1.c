@@ -21,10 +21,14 @@ int main(void) {
     struct file* aFilePtr = (struct file*)malloc(sizeof(struct file));
     strcpy(aFilePtr->name, "file3.c");
 
+    FilePtr aFilePtr2 = (FilePtr)malloc(sizeof(File));
+    strcpy(aFilePtr2->name, "file4.c");
+
     //print members
     puts(aFile.name);
     puts(aFile2.name);
     puts(aFilePtr->name);
+    puts(aFilePtr2->name);
 
     return 0;
 }
